@@ -7,7 +7,7 @@ from biblioteca.models import Ejemplar
 
 class LibroAdmin(admin.ModelAdmin):
     list_display = ['Titulo', 'Editorial']
-    fields = ['Titulo', 'Editorial']
+    #fields = ['Titulo', 'Editorial']
 
 class LibroInline(admin.TabularInline):
     model = Libro
@@ -25,6 +25,7 @@ class UsuarioAdmin(admin.ModelAdmin):
     )
 
 class AutorAdmin(admin.ModelAdmin):
+    list_display = ['Nombre',]
     inlines = [LibroInline,]
     search_fields = ['Nombre']
 
